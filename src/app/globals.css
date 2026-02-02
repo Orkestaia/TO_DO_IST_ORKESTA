@@ -4,60 +4,46 @@
 
 @layer base {
   :root {
-    /* Todoist Neutral Palette */
     --background: 255 255 255;
     --foreground: 30 30 30;
-    /* Todoist dark text */
-
     --muted: 250 250 250;
-    /* bg-neutral-50 */
     --muted-foreground: 128 128 128;
-
     --border: 240 240 240;
-    /* Very light border */
-
-    /* Todoist Red */
-    --primary: 220 76 62;
-    /* #DC4C3E */
+    --primary: 220 76 62; /* #dc4c3e */
     --primary-foreground: 255 255 255;
-
     --sidebar: 250 250 250;
-    /* Light gray sidebar */
     --sidebar-foreground: 60 60 60;
   }
 
   .dark {
-    /* Todoist Dark Mode */
-    --background: 31 31 31;
-    /* #1f1f1f */
+    /* Orkesta Dark Theme */
+    --background: 10 10 10; /* #0a0a0a - Deep Black */
     --foreground: 255 255 255;
+    
+    --muted: 30 30 30;
+    --muted-foreground: 163 163 163; /* neutral-400 */
 
-    --muted: 40 40 40;
-    --muted-foreground: 160 160 160;
+    --border: 40 40 40;
 
-    --border: 50 50 50;
-
-    --primary: 220 76 62;
-    /* Red stays red usually */
+    --primary: 220 76 62; /* Todoist Red */
     --primary-foreground: 255 255 255;
 
-    --sidebar: 35 35 35;
-    /* Dark sidebar */
-    --sidebar-foreground: 230 230 230;
+    --sidebar: 20 20 20; /* #141414 - Slightly lighter for sidebar */
+    --sidebar-foreground: 235 235 235;
   }
 
   body {
-    @apply antialiased text-[14px] leading-relaxed;
+    @apply antialiased text-[14px] leading-relaxed selection:bg-red-500/30;
   }
 }
 
 /* Utilities */
 .sidebar-item {
-  @apply flex items-center gap-2.5 px-3 py-1.5 rounded-[5px] text-[13px] text-neutral-700 dark:text-neutral-300 hover:bg-black/5 dark:hover:bg-white/5 transition-colors cursor-pointer select-none;
+  @apply flex items-center gap-2 px-2 py-1.5 rounded-[5px] text-[13px] text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-[#2a2a2a] transition-colors cursor-pointer select-none;
 }
 
 .sidebar-item.active {
-  @apply bg-red-50 text-red-600 dark:bg-red-900/20 dark:text-red-300 font-medium;
+  @apply bg-red-50 text-red-700 dark:bg-red-900/20 dark:text-red-300 font-medium;
 }
 
 .task-checkbox {

@@ -40,7 +40,7 @@ export function TaskCard({ task }: TaskProps) {
 
     return (
         <div className={cn(
-            "group flex items-start gap-3 py-2.5 border-b border-neutral-100 dark:border-neutral-800 transition-all hover:bg-neutral-50 dark:hover:bg-transparent -mx-2 px-2 rounded-md",
+            "group flex items-start gap-3 py-2.5 border-b border-neutral-100 dark:border-neutral-800 transition-all hover:bg-neutral-50 dark:hover:bg-[#1a1a1a] -mx-2 px-2 rounded-md",
             isDone && "opacity-50"
         )}>
             {/* Checkbox */}
@@ -48,7 +48,7 @@ export function TaskCard({ task }: TaskProps) {
                 onClick={handleToggle}
                 disabled={isPending}
                 className={cn(
-                    "task-checkbox mt-0.5 shrink-0",
+                    "task-checkbox mt-0.5 shrink-0 transition-colors",
                     priorityClass(task.priority),
                     isDone && "bg-neutral-400 border-neutral-400"
                 )}
@@ -57,23 +57,31 @@ export function TaskCard({ task }: TaskProps) {
             </button>
 
             <div className="flex-1 min-w-0">
-                <div className={cn("text-[14px] leading-snug mb-0.5 text-neutral-800 dark:text-neutral-200", isDone && "line-through text-neutral-500")}>
-                    {task.title}
+                <div className="flex items-start justify-between gap-2">
+                    <div className={cn("text-[14px] leading-snug text-neutral-800 dark:text-neutral-200", isDone && "line-through text-neutral-500")}>
+                        {task.title}
+                    </div>
                 </div>
 
-                <div className="flex items-center gap-3 text-[12px] text-neutral-500">
-                    {task.dueDate && (
-                        <span className={cn("flex items-center gap-1", task.priority === 'P1' ? 'text-red-500' : '')}>
-                            <Calendar size={12} />
-                            {new Date(task.dueDate).toLocaleDateString(undefined, { day: 'numeric', month: 'short' })}
-                        </span>
-                    )}
+                <div className="flex items-center justify-between mt-1">
+                    {/* Left: Date */}
+                    <div className="flex items-center gap-3 text-[12px]">
+                        {task.dueDate && (
+                            <span className={cn("flex items-center gap-1", task.priority === 'P1' ? 'text-red-500' : 'text-purple-600 dark:text-purple-400')}>
+                                <Calendar size={12} />
+                                {new Date(task.dueDate).toLocaleDateString(undefined, { day: 'numeric', month: 'short' })}
+                            </span>
+                        )}
+                    </div>
 
+                    {/* Right: Project */}
                     {task.project && (
-                        <span className="flex items-center gap-1 text-neutral-400 group-hover:text-neutral-600 dark:group-hover:text-neutral-300 transition-colors">
-                            <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: task.project.color || '#888' }} />
-                            {task.project.name}
-                        </span>
+                        <div className="flex items-center gap-1 text-[12px] text-neutral-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span className="text-neutral-300 dark:text-neutral-600">#</span>
+                            <span className="hover:underline cursor-pointer dark:text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300">
+                                {task.project.name}
+                            </span>
+                        </div>
                     )}
                 </div>
             </div>
