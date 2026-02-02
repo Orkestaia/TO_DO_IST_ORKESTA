@@ -6,6 +6,8 @@ import { AudioCapture } from '@/components/features/inbox/AudioCapture'
 import { Plus, Loader2, CornerDownLeft, Calendar } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
+import { parseTaskInput } from '@/lib/smart-input'
+
 export function QuickAdd() {
     const [title, setTitle] = useState('')
     const [isSubmitting, setIsSubmitting] = useState(false)
@@ -17,7 +19,12 @@ export function QuickAdd() {
 
         setIsSubmitting(true)
         try {
-            await createInboxTask(title)
+            // 1. Parse Input
+            const { title: cleanTitle, priority, dueDate } = parseTaskInput(title)
+
+            // 2. Submit structured data
+            await createInboxTask(cleanTitle, priority, dueDate)
+
             setTitle('')
             setIsExpanded(false)
         } catch (error) {

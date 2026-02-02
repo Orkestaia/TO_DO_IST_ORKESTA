@@ -3,7 +3,7 @@
 import { prisma } from '@/lib/prisma'
 import { revalidatePath } from 'next/cache'
 
-export async function createInboxTask(title: string) {
+export async function createInboxTask(title: string, priority: string = 'P4', dueDate: Date | null = null) {
     // Find Inbox project
     const inboxProject = await prisma.project.findFirst({
         where: { name: '05_INBOX' } // Depending on seed
@@ -28,7 +28,9 @@ export async function createInboxTask(title: string) {
             title,
             status: 'backlog',
             projectId: targetProjectId,
-            priority: 'P4', // Default for inbox
+            priority,
+            dueDate,
+            isInbox: true // Explicitly mark as inbox item
         }
     })
 
