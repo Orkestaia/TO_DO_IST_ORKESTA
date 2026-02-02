@@ -1,0 +1,20 @@
+{
+  "node": {
+    "009f2efe35c6bb3be99d405c8ec69f61ce0664efac": {
+      "workers": {
+        "app/review/page": {
+          "moduleId": 15426,
+          "async": false,
+          "exportedName": "getProjectsConfig",
+          "filename": "src/actions/projects.ts"
+        }
+      },
+      "layer": {
+        "app/review/page": "rsc"
+      },
+      "exportedName": "getProjectsConfig",
+      "filename": "src/actions/projects.ts"
+    }
+  },
+  "edge": {}
+}

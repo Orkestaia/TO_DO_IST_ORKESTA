@@ -1,0 +1,20 @@
+{
+  "node": {
+    "009f2efe35c6bb3be99d405c8ec69f61ce0664efac": {
+      "workers": {
+        "app/dashboard/page": {
+          "moduleId": 22514,
+          "async": false,
+          "exportedName": "getProjectsConfig",
+          "filename": "src/actions/projects.ts"
+        }
+      },
+      "layer": {
+        "app/dashboard/page": "rsc"
+      },
+      "exportedName": "getProjectsConfig",
+      "filename": "src/actions/projects.ts"
+    }
+  },
+  "edge": {}
+}

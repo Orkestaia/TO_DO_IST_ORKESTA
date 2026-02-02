@@ -1,0 +1,20 @@
+{
+  "node": {
+    "009f2efe35c6bb3be99d405c8ec69f61ce0664efac": {
+      "workers": {
+        "app/_not-found/page": {
+          "moduleId": 19721,
+          "async": false,
+          "exportedName": "getProjectsConfig",
+          "filename": "src/actions/projects.ts"
+        }
+      },
+      "layer": {
+        "app/_not-found/page": "rsc"
+      },
+      "exportedName": "getProjectsConfig",
+      "filename": "src/actions/projects.ts"
+    }
+  },
+  "edge": {}
+}

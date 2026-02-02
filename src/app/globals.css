@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Todoist Neutral Palette */
+    --background: 255 255 255;
+    --foreground: 30 30 30;
+    /* Todoist dark text */
+
+    --muted: 250 250 250;
+    /* bg-neutral-50 */
+    --muted-foreground: 128 128 128;
+
+    --border: 240 240 240;
+    /* Very light border */
+
+    /* Todoist Red */
+    --primary: 220 76 62;
+    /* #DC4C3E */
+    --primary-foreground: 255 255 255;
+
+    --sidebar: 250 250 250;
+    /* Light gray sidebar */
+    --sidebar-foreground: 60 60 60;
+  }
+
+  .dark {
+    /* Todoist Dark Mode */
+    --background: 31 31 31;
+    /* #1f1f1f */
+    --foreground: 255 255 255;
+
+    --muted: 40 40 40;
+    --muted-foreground: 160 160 160;
+
+    --border: 50 50 50;
+
+    --primary: 220 76 62;
+    /* Red stays red usually */
+    --primary-foreground: 255 255 255;
+
+    --sidebar: 35 35 35;
+    /* Dark sidebar */
+    --sidebar-foreground: 230 230 230;
+  }
+
+  body {
+    @apply antialiased text-[14px] leading-relaxed;
+  }
+}
+
+/* Utilities */
+.sidebar-item {
+  @apply flex items-center gap-2.5 px-3 py-1.5 rounded-[5px] text-[13px] text-neutral-700 dark:text-neutral-300 hover:bg-black/5 dark:hover:bg-white/5 transition-colors cursor-pointer select-none;
+}
+
+.sidebar-item.active {
+  @apply bg-red-50 text-red-600 dark:bg-red-900/20 dark:text-red-300 font-medium;
+}
+
+.task-checkbox {
+  @apply w-[18px] h-[18px] rounded-full border border-neutral-400 dark:border-neutral-500 hover:bg-neutral-100 dark:hover:bg-neutral-800 cursor-pointer flex items-center justify-center transition-all bg-transparent;
+}
+
+.task-checkbox:hover {
+  @apply border-red-500;
+}

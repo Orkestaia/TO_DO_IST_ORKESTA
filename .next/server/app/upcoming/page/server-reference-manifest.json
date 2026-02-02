@@ -1,0 +1,35 @@
+{
+  "node": {
+    "009f2efe35c6bb3be99d405c8ec69f61ce0664efac": {
+      "workers": {
+        "app/upcoming/page": {
+          "moduleId": 55449,
+          "async": false,
+          "exportedName": "getProjectsConfig",
+          "filename": "src/actions/projects.ts"
+        }
+      },
+      "layer": {
+        "app/upcoming/page": "rsc"
+      },
+      "exportedName": "getProjectsConfig",
+      "filename": "src/actions/projects.ts"
+    },
+    "606fcb80ad4759892f4ecf56ed6ddbb6e4f2b44383": {
+      "workers": {
+        "app/upcoming/page": {
+          "moduleId": 55449,
+          "async": false,
+          "exportedName": "toggleTaskStatus",
+          "filename": "src/actions/tasks.ts"
+        }
+      },
+      "layer": {
+        "app/upcoming/page": "action-browser"
+      },
+      "exportedName": "toggleTaskStatus",
+      "filename": "src/actions/tasks.ts"
+    }
+  },
+  "edge": {}
+}

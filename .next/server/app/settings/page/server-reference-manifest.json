@@ -1,0 +1,50 @@
+{
+  "node": {
+    "009f2efe35c6bb3be99d405c8ec69f61ce0664efac": {
+      "workers": {
+        "app/settings/page": {
+          "moduleId": 91346,
+          "async": false,
+          "exportedName": "getProjectsConfig",
+          "filename": "src/actions/projects.ts"
+        }
+      },
+      "layer": {
+        "app/settings/page": "rsc"
+      },
+      "exportedName": "getProjectsConfig",
+      "filename": "src/actions/projects.ts"
+    },
+    "00aff763209ebfbaf664f187123910df120ad75773": {
+      "workers": {
+        "app/settings/page": {
+          "moduleId": 91346,
+          "async": false,
+          "exportedName": "getSettings",
+          "filename": "src/actions/settings.ts"
+        }
+      },
+      "layer": {
+        "app/settings/page": "rsc"
+      },
+      "exportedName": "getSettings",
+      "filename": "src/actions/settings.ts"
+    },
+    "40e3b46b77dd0f5ee0c29cfc54c1dbfdb0f9e05b5b": {
+      "workers": {
+        "app/settings/page": {
+          "moduleId": 91346,
+          "async": false,
+          "exportedName": "updateSettings",
+          "filename": "src/actions/settings.ts"
+        }
+      },
+      "layer": {
+        "app/settings/page": "action-browser"
+      },
+      "exportedName": "updateSettings",
+      "filename": "src/actions/settings.ts"
+    }
+  },
+  "edge": {}
+}

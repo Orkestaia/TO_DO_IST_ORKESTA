@@ -1,0 +1,65 @@
+{
+  "node": {
+    "009f2efe35c6bb3be99d405c8ec69f61ce0664efac": {
+      "workers": {
+        "app/page": {
+          "moduleId": 31551,
+          "async": false,
+          "exportedName": "getProjectsConfig",
+          "filename": "src/actions/projects.ts"
+        }
+      },
+      "layer": {
+        "app/page": "rsc"
+      },
+      "exportedName": "getProjectsConfig",
+      "filename": "src/actions/projects.ts"
+    },
+    "606fcb80ad4759892f4ecf56ed6ddbb6e4f2b44383": {
+      "workers": {
+        "app/page": {
+          "moduleId": 31551,
+          "async": false,
+          "exportedName": "toggleTaskStatus",
+          "filename": "src/actions/tasks.ts"
+        }
+      },
+      "layer": {
+        "app/page": "rsc"
+      },
+      "exportedName": "toggleTaskStatus",
+      "filename": "src/actions/tasks.ts"
+    },
+    "402941b6eaabf984b8c34d6e406edb1fa47c4fa30e": {
+      "workers": {
+        "app/page": {
+          "moduleId": 31551,
+          "async": false,
+          "exportedName": "createInboxTask",
+          "filename": "src/actions/inbox.ts"
+        }
+      },
+      "layer": {
+        "app/page": "action-browser"
+      },
+      "exportedName": "createInboxTask",
+      "filename": "src/actions/inbox.ts"
+    },
+    "00fdf5f731b090fd18f99f0c41dac8ab3b4df0ba2f": {
+      "workers": {
+        "app/page": {
+          "moduleId": 31551,
+          "async": false,
+          "exportedName": "getTodayTasks",
+          "filename": "src/actions/tasks.ts"
+        }
+      },
+      "layer": {
+        "app/page": "rsc"
+      },
+      "exportedName": "getTodayTasks",
+      "filename": "src/actions/tasks.ts"
+    }
+  },
+  "edge": {}
+}

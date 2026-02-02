@@ -1,0 +1,63 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://neondb_owner:npg_Xy8fYFKptZb9@ep-autumn-bush-ahhhapsd-pooler.c-3.us-east-1.aws.neon.tech/neondb?connect_timeout=15&sslmode=require"
+  directUrl = "postgresql://neondb_owner:npg_Xy8fYFKptZb9@ep-autumn-bush-ahhhapsd.c-3.us-east-1.aws.neon.tech/neondb?sslmode=require"
+}
+
+model Settings {
+  id              Int     @id @default(1)
+  primaryColor    String  @default("#814AC8")
+  accentColor     String  @default("#23475B")
+  darkMode        Boolean @default(true)
+  gamification    Boolean @default(true)
+  soundEnabled    Boolean @default(false)
+  
+  // Logic
+  tasksPerDay     Int     @default(5)
+  wipLimit        Int     @default(5)
+}
+
+model Project {
+  id          String    @id @default(cuid())
+  name        String
+  parentId    String?
+  parent      Project?  @relation("ProjectHierarchy", fields: [parentId], references: [id])
+  children    Project[] @relation("ProjectHierarchy")
+  
+  color       String?
+  wipLimit    Int       @default(5)
+  archived    Boolean   @default(false)
+  
+  tasks       Task[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Task {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  priority    String   @default("P4") // P1, P2, P3, P4
+  
+  status      String   @default("todo") // todo, waiting, done
+  dueDate     DateTime?
+  
+  projectId   String?
+  project     Project? @relation(fields: [projectId], references: [id])
+  
+  // Inbox / Processing
+  isInbox     Boolean  @default(false)
+  transcript  String?  // From audio
+  
+  labels      String?  // Comma separated
+  energyLabel  String?
+  contextLabel String?
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  completedAt DateTime?
+}

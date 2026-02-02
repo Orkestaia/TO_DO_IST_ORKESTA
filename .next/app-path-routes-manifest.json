@@ -1,0 +1,13 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/dashboard/page": "/dashboard",
+  "/favicon.ico/route": "/favicon.ico",
+  "/inbox/page": "/inbox",
+  "/page": "/",
+  "/project/[id]/page": "/project/[id]",
+  "/review/daily/page": "/review/daily",
+  "/review/page": "/review",
+  "/settings/page": "/settings",
+  "/upcoming/page": "/upcoming"
+}
