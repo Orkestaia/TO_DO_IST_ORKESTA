@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Mic, MicOff, Loader2 } from 'lucide-react'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 // Using native API for simplicity and no-dep reliability in MVP
 // Types usually require 'dom-speech-recognition' or similar, but we can cast window.
 

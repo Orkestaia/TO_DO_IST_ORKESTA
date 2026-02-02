@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import { updateSettings } from '@/actions/settings' // import action
 import { Settings as SettingsIcon, Save } from 'lucide-react'
 

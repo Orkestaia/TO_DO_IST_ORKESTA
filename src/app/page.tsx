@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/Button"
+import { Button } from "@/components/ui/button"
 import { TaskCard } from "@/components/features/task/TaskCard"
 import { QuickAdd } from "@/components/features/task/QuickAdd"
 import { getTodayTasks } from "@/actions/tasks"

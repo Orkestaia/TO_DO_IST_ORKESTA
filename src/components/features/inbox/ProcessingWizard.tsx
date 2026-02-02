@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import { processTask } from '@/actions/process'
 import { X, ArrowRight, Check } from 'lucide-react'
 

@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { createInboxTask } from '@/actions/inbox'
 import { TaskCard } from '@/components/features/task/TaskCard'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import { AudioCapture } from './AudioCapture'
 import { ProcessingWizard } from './ProcessingWizard'
 import { Inbox, Plus } from 'lucide-react'
